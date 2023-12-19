@@ -64,7 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     
     [RouterModule.forRoot(routes)],
   ],
-  providers: [MatDialogRef],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
