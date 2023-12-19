@@ -1,0 +1,56 @@
+<div mat-dialog-title style="text-align: center;">
+  <h1>Login Form</h1> 
+  </div>
+<form  [formGroup]="myForm" (ngSubmit)="submit()">
+  
+    
+<div mat-dialog-content class="content">
+  <div class="row">
+     <mat-form-field appearance="outline">
+      <mat-label>FirstName</mat-label>
+      <input type="text" 
+       matInput placeholder="FirstName"
+       formControlName="FirstName" >
+      <span *ngIf="user && user.touched"></span>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+      <mat-label>LastName</mat-label>
+      <input type="text"
+      matInput placeholder="LastName"
+      formControlName="LastName">
+      </mat-form-field>
+
+      
+  </div>
+
+<div class="row">
+    <mat-form-field appearance="outline">
+     <mat-label>Username</mat-label>
+     <input type="text" 
+      matInput placeholder="Username"
+      formControlName="Username" >
+     <span *ngIf="user && user.touched"></span>
+     </mat-form-field>
+
+     <mat-form-field appearance="outline">
+     <mat-label>Password</mat-label>
+     <input type="password"
+     matInput placeholder="Password"
+     formControlName="Password">
+     </mat-form-field>
+
+</div>
+</div>
+
+<div mat-dialog-actions>
+    <button type="submit" 
+    mat-raised-button color="primary">Login</button>
+  </div>
+
+  <div mat-dialog-actions>
+    <button type="submit" 
+    mat-raised-button>Cancel</button>
+  </div>
+
+</form>
