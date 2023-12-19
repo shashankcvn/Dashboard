@@ -21,7 +21,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {MatTableModule} from '@angular/material/table';
 import { UserTableComponent } from './user-table/user-table.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -64,7 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     
     [RouterModule.forRoot(routes)],
   ],
-  providers: [],
+  providers: [MatDialogRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
